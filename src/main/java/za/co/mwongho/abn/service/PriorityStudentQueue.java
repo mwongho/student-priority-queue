@@ -14,6 +14,12 @@ import java.util.List;
 import java.util.PriorityQueue;
 import java.util.stream.Collectors;
 
+/**
+ * The queue serves students based on the priority criteria. 1. The student having the highest
+ * Cumulative Grade Point Average (CGPA) is served first. 2. Any students having the same CGPA will
+ * be served by name in ascending case-sensitive alphabetical order. 3. Any students having the same
+ * CGPA and name will be served in ascending order of the id.
+ */
 public class PriorityStudentQueue implements StudentQueue {
 
   // Order by cgpa dsc, name asc, id asc
@@ -30,6 +36,13 @@ public class PriorityStudentQueue implements StudentQueue {
     this.comparator = comparator;
   }
 
+  /**
+   * Process all the given events and return all the students yet to be served in the priority
+   * order.
+   *
+   * @param events
+   * @return Students yet to be served in the priority order
+   */
   @Override
   public List<Student> getStudents(@NonNull final List<String> events) {
 

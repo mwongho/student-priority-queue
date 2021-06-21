@@ -38,9 +38,7 @@ Constant time - O(1)
 
 - O(1)
 
-    public static QueueEvent parse(@NonNull final String eventString) { 
-    ...
-    }
+  public static QueueEvent parse(@NonNull final String eventString) { ... }
 
 #### za.co.mwongho.abn.service.PriorityStudentQueue.parseEvents
 
